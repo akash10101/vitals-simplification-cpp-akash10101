@@ -19,7 +19,7 @@ bool IsRespRateOK(float respRate)
 	return (respRate<respRate_limit[0] || respRate>respRate_limit[1]);
 }
 bool vitalsAreOk(float bpm, float spo2, float respRate) {
-  if(IsBpmOK||IsSpo2OK||IsRespRateOK) {
+  if(IsBpmOK(bpm)||IsSpo2OK(spo2)||IsRespRateOK(respRate)) {
     return false;
   
   }
